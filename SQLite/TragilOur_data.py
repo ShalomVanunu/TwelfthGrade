@@ -13,5 +13,6 @@ conn.commit() #do the state
 
 conn.close() #close the connction to db
 
-
+w ='ttt'
+print('dd'.f)
 
