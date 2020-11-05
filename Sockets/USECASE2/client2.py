@@ -8,10 +8,7 @@ ADDR = (SERVER, PORT)
 
 print("[STARTING] Clinet is starting...")
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-if client.connect(ADDR) :
-    print('OK')
-else:
-    print('Bad')
+client.connect(ADDR)
 while True:
     msg = input('[SEND MESSAGE] Type [Exit].....:')
     if msg == 'exit':
