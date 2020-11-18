@@ -18,6 +18,7 @@ text_label.grid(column =0 , row= 1)
 
 def clicked(): # function that show text on label
     result_text.configure(text = entry_text.get())
+    print(combo_box.get())
 
 
 button_click = Button(window, text="Click me!", command = clicked)
@@ -32,6 +33,7 @@ result_text.grid(column =0 , row =3)
 combo_box = Combobox(window, values = (1,2,3,4))
 combo_box.grid(column =2, row = 2)
 combo_box.current(2)
+print(combo_box.get())
 
 #window.mainloop() # run the program
 window.mainloop()
