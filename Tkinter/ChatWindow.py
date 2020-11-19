@@ -4,6 +4,9 @@ from tkinter import * # import the library
 
 root = Tk()
 
+writer = open("chat.txt","a+")
+writer.write("...Start of Log Chat....\n")
+
 root.title("Chat")
 root.iconbitmap("chat.ico") # add icon
 root.geometry("400x500")
@@ -15,6 +18,7 @@ chat_window.place(x=6,y=6, height=385, width=370)
 
 def clicked():
     text = message_window.get("1.0",END)
+    writer.write(text+'\n')
     message_window.delete("1.0", END)
 #The first part, "1.0" means that the input should be read from line one to the END
     chat_window.insert(END, text)
