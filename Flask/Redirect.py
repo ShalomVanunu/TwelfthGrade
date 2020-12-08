@@ -13,8 +13,8 @@ def index():
     return "<h1> Hello Class </h1> <p>Enter Variable Path</p>"
 
 
-@app.route("/name/<name>")
-def show_name(name):
+@app.route("/name/<name>") #path web
+def show_name(name): # must be function
    return f"<h1> The name is : {name}"
 
 
@@ -31,6 +31,10 @@ def ynet():
 @app.route("/shalom/") # Internal WEB
 def shalom():
     return redirect(url_for("show_name", name = "shalom"))
+
+@app.route("/shai/")
+def shai():
+    return "<h1> shai website </h1>"
 
 @app.route("/sellsofapple/<apples>") # internal redirect
 def sellsapples(apples):
