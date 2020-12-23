@@ -6,7 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Threading" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Sockets/USECASE1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Python" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <sourceFolder url="file://$MODULE_DIR$/Flask/sqlalchemy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Flask" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

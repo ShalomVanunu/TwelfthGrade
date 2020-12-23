@@ -9,7 +9,7 @@ def home():
         email = request.form["email"]
         return f"<h1> {username},{email} </h1> "
     else:
-        return render_template("login.html")
+        return render_template("login1.html")
 
 
 
