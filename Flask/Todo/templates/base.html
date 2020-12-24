@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>todo app</title>
+</head>
+<body>
+
+
+<h1><span class="badge badge-secondary">Todo App</span></h1>
+
+<div  class="card text-center" style="width: 18rem;">
+  <div class="card-body">
+    <form action="/add" method="post">
+    <div class="form-group" >
+    <input type="text" name="task" class="form-control" id="exampleInputEmail1" > <!-- the text task entry -->
+    <small id="emailHelp" class="form-text text-muted">write the Task</small>
+    </div>
+     <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+  </div>
+</div>
+
+
+{% for todo in todo_list %}
+       <div class="alert alert-secondary" role="alert">
+    <h4><span class="badge badge-secondary">{{todo.id}} | {{todo.title}}</span></h4>
+        <!-- Button for Update the status task . by link to update page-->
+        <a href="/update/{{ todo.id }}" type="button" class="btn btn-outline-success" >Update Task</a>
+        <!-- Button for delete the task.  by link to delete page -->
+        <a href="/delete/{{ todo.id }}" type="button" class="btn btn-outline-danger">Delete</a>
+        {% if todo.complete == False %}<!-- Show not completed status -->
+         <span class="badge badge-pill badge-danger">Not Complete</span>
+        {% else %}<!-- Show  completed status -->
+         <span class="badge badge-pill badge-success">Completed</span>
+        {% endif %}
+        </div>
+
+
+
+
+{% endfor %}
+
+<!-- bootstrap javascript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script></body>
+
+</body>
+</html>
